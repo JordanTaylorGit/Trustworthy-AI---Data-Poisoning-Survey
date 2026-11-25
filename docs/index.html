@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Poisoning Attacks and Defenses: A Literature Survey</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <p class="course">CSE 6324 Trustworthy AI · Project</p>
+    <h1>Data poisoning: how training data gets attacked, and how models defend</h1>
+    <p class="byline">By <span id="team">Name 1 and Name 2</span></p>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#taxonomy">Framework</a>
+      <a href="#papers">Papers</a>
+      <a href="#resources">Resources</a>
+      <a href="#disclosure">AI disclosure</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="overview">
+    <h2>Topic overview</h2>
+    <p>TODO (3 short paragraphs): what data poisoning is, why it matters for trustworthy AI (models trained on scraped, crowd-sourced, or shared data), and a real incident or practical example.</p>
+    <h3>Scope</h3>
+    <p><strong>Covered:</strong> training-time poisoning (availability, targeted, backdoor) and defenses (detection, robust training, inspection and repair, certification), plus LLM, web-scale, and RAG settings.</p>
+    <p><strong>Not covered:</strong> inference-time adversarial examples, model extraction, privacy attacks.</p>
+    <h3>How this site is organized</h3>
+    <p>The framework below groups attacks by goal, mechanism, and setting, and defenses into four families. Each paper in the list is tagged with its category, and you can filter by it. Software and datasets are listed at the end.</p>
+  </section>
+
+  <section id="taxonomy">
+    <h2>Conceptual framework</h2>
+    <div class="cols">
+      <div>
+        <h3 class="attack">Attacks</h3>
+        <dl>
+          <dt>Goal</dt><dd>Indiscriminate, targeted, backdoor</dd>
+          <dt>Mechanism</dt><dd>Label flipping, clean-label, bilevel optimization, trigger insertion</dd>
+          <dt>Setting</dt><dd>Classic ML, deep learning, fine-tuning, LLMs, RAG</dd>
+        </dl>
+      </div>
+      <div>
+        <h3 class="defense">Defenses</h3>
+        <dl>
+          <dt>Sanitization</dt><dd>Find and remove poisoned samples</dd>
+          <dt>Robust training</dt><dd>Train a clean model on poisoned data</dd>
+          <dt>Inspection and repair</dt><dd>Detect or remove a backdoor after training</dd>
+          <dt>Certification</dt><dd>Provable limits on poison impact</dd>
+        </dl>
+      </div>
+    </div>
+    <p class="todo">TODO: add the synthesis for each category (assumptions, evaluation, strengths, limitations, open problems). Replace this block with a comparison table once <code>planning/COMPARISON_TABLE.md</code> is filled.</p>
+  </section>
+
+  <section id="papers">
+    <h2>Research papers</h2>
+    <div class="controls">
+      <div id="filters" role="group" aria-label="Filter papers by category"></div>
+      <input id="search" type="search" placeholder="Search title, author, tag" aria-label="Search papers">
+    </div>
+    <p id="count" class="muted"></p>
+    <ol id="paper-list" class="list"></ol>
+  </section>
+
+  <section id="resources">
+    <h2>Software, datasets, and benchmarks</h2>
+    <ul id="resource-list" class="list"></ul>
+  </section>
+
+  <section id="disclosure">
+    <h2>AI use disclosure</h2>
+    <p>TODO: paste the final statement from <code>planning/AI_DISCLOSURE_LOG.md</code>. Name each tool, what it was used for, and how output was verified or revised.</p>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Course project for CSE 6324. Descriptions are the authors' paraphrases; follow the links for the original papers.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

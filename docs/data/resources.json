@@ -1,0 +1,11 @@
+[
+  {"name":"Adversarial Robustness Toolbox (ART)","type":"library","url":"","summary":"","verified":false},
+  {"name":"BackdoorBench","type":"benchmark","url":"","summary":"","verified":false},
+  {"name":"TrojanZoo","type":"library","url":"","summary":"","verified":false},
+  {"name":"BackdoorBox","type":"library","url":"","summary":"","verified":false},
+  {"name":"OpenBackdoor","type":"library","url":"","summary":"NLP backdoor attacks and defenses.","verified":false},
+  {"name":"Poisoning benchmark (Schwarzschild et al.)","type":"benchmark","url":"","summary":"","verified":false},
+  {"name":"NIST TrojAI","type":"benchmark","url":"","summary":"","verified":false},
+  {"name":"CIFAR-10 / GTSRB","type":"dataset","url":"","summary":"","verified":false},
+  {"name":"SST-2 / IMDB","type":"dataset","url":"","summary":"","verified":false}
+]
